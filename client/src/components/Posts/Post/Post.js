@@ -76,11 +76,7 @@ const Post = ({ post, setCurrentId }) => {
         <InputLabel id="action-to-perform">Action</InputLabel><br></br>
           <Select>
             <MenuItem onClick={() => setCurrentId(post._id)} style={{ color: 'black' }} value={0}>Edit</MenuItem>
-<<<<<<< HEAD
             <MenuItem onClick={handleShare} value={1}> Share </MenuItem>
-=======
-            <MenuItem onClick={handleShare}value={1}> Share </MenuItem>
->>>>>>> 08de309926aef9efe2887e9680277892b6559782
             <MenuItem value={2}> Download </MenuItem>
           </Select>
       </FormControl>
