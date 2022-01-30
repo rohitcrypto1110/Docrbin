@@ -8,6 +8,7 @@ const router = express.Router();
 
 export const getShortUrl = async (req, res) => { 
     try {
+		console.log("hello");
     	let {id, userId, expiresIn} = req.body;
     	if(!expiresIn)
     		expiresIn=-1;

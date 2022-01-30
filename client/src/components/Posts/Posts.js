@@ -8,11 +8,14 @@ import useStyles from './styles';
 const Posts = ({ setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   const classes = useStyles();
+  const user = JSON.parse(localStorage.getItem('profile'));
 
   return (
     !posts.length ? <CircularProgress /> : (
       <Grid className={classes.container} container alignItems="stretch" spacing={3}>
-        {posts.map((post) => (
+      {
+        posts.filter(post => (user?.result?.googleId === post?.creator || user?.result?._id === post?.creator))
+        .map((post) => (
           <Grid key={post._id} item xs={12} sm={6} md={6}>
             <Post post={post} setCurrentId={setCurrentId} />
           </Grid>

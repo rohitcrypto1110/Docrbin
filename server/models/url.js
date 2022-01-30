@@ -7,7 +7,6 @@ const urlSchema = mongoose.Schema({
   },
   creator: {
   	type: String,
-  	required: true
   },
   createdAt: {
   	type: Date,
