@@ -12,7 +12,7 @@ const Post = ({ post, setCurrentId }) => {
   const user = JSON.parse(localStorage.getItem('profile'));
 
   function handleShare() {
-    fetch('http://localhost:5000/url/getShortUrl',{
+    fetch('https://dockrbin-server.herokuapp.com/url/getShortUrl',{
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify(
