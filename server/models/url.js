@@ -13,8 +13,7 @@ const urlSchema = mongoose.Schema({
     default: new Date()
   },
   expiresIn: {
-  	type: Number,
-  	default: -1
+  	type: Number
   }
 });
 

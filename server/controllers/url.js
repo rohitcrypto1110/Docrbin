@@ -11,11 +11,10 @@ export const getShortUrl = async (req, res) => {
 		console.log("hello");
     	let {id, userId, expiresIn} = req.body;
     	if(!expiresIn)
-    		expiresIn=-1;
+    		expiresIn=60;
     	const newUrl = new Url({ fileId: id, creator: userId, expiresIn: expiresIn})
         await newUrl.save();
-
-        res.status(200).json("www.shortUrl.com/"+newUrl._id);
+        res.status(200).json("https://s-url.netlify.app/"+newUrl._id);
     } catch (error) {
         res.status(409).json({ message: error.message });
     }
