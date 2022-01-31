@@ -1,3 +1,3 @@
-client - https://nostalgic-easley-e6cf95.netlify.app/
-client1 - https://s--url.herokuapp.com/
+client - https://docrbin-client.herokuapp.com/
+client1 (short URL) - https://s--url.herokuapp.com/
 server - https://docrbin-server.herokuapp.com/
